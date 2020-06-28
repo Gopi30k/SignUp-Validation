@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+body {
+  background: linear-gradient(to right, #8fdafc, #2474bc);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.signup-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 50px;
+  width: 340px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.signup-card h2 {
+  color: #04acfc;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-control small {
+  visibility: hidden;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.form-control.error small {
+  color: #e65303;
+  visibility: visible;
+}
+
+.form-control.info small {
+  color: #04acfc;
+  visibility: visible;
+}
+
+.form-control input {
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #a6acae;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-bottom: 2px solid #04acfc;
+}
+
+.form-control input::placeholder {
+  color: #a6acae;
+  font-weight: 600;
+}
+
+.form-control i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  visibility: hidden;
+}
+
+.form-control.valid i.fa-check-circle {
+  color: #21b98c;
+  visibility: visible;
+}
+.form-control.invalid i.fa-exclamation-circle {
+  color: #e65303;
+  visibility: visible;
+}
+
+.signup-card button {
+  padding: 15px 65px;
+  background-color: #04acfc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 10px 20px #8fdafc, 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.signup-card button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+  .signup-card {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .signup-card {
+    width: 70%;
+    margin: auto;
+  }
+}
